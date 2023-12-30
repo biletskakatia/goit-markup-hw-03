@@ -4,9 +4,21 @@ body {
     background-color: #FFFFFF;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+ 
+
 ul {
     list-style: none;
+    margin: 0;
+    padding-left: 0;
 }
+
+img {
+display: block;
+}
+
 
 a {
     text-decoration: none;
@@ -29,8 +41,30 @@ a {
     letter-spacing: 0.02em;
     text-transform: capitalize;
     }
+    
+ .container { 
+    max-width: 1440;
+    padding: 0 156px;
+    margin: 0 auto;
+  }
+ .section{
+    padding-top: 120px;
+    padding-bottom: 120px;
+ }
 
  /*----------------HEADER--------------*/
+.header{
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+.header-nav{
+display: flex;
+flex-grow: 1;
+}
+
+.header-container{
+    display: flex;
+}
 
 .header-logo {
 color: #4d5ae5;
@@ -40,11 +74,23 @@ font-weight: 700;
 line-height: 1.17; 
 letter-spacing: 0.03em;
 text-transform: uppercase;
+margin-right: 76px;
+display: flex;
 }
 .header-logo span {
     color: #2e2f42;
 }
 
+.header-menu-list{
+display: flex;
+gap: 40px;
+
+}
+.header-address-list{
+    display: flex;  
+    gap: 40px;
+    
+}
 .header-menu-link {
 color: #2e2f42;
 font-size: 16px;
@@ -89,8 +135,13 @@ letter-spacing: 0.02em;
 /*----------------HERO--------------*/
 
 .hero {
-    background: #2E2F42;
+    
 }
+.hero-container{
+    background: #2E2F42;
+    padding: 188px 472px;
+}
+
 .hero-title {
 color:  #FFF;
 font-size: 56px;
@@ -98,8 +149,12 @@ font-weight: 700;
 line-height: 1.07;
 text-align: center;
 letter-spacing: 0.02em;
+width: 496px;
+margin: 0 auto;
 }
 .hero-btn {
+display: block;
+margin: 48px auto;
  color:  #FFF;
  background-color: #4D5AE5;
 font-size: 16px;
@@ -107,6 +162,8 @@ font-weight: 500;
 line-height: 1.50; 
 letter-spacing: 0.04em;
 cursor: pointer;
+border-radius: 4px;
+padding: 16px 32px;
 }
 
 .hero-btn:hover {
@@ -121,11 +178,15 @@ cursor: pointer;
 /** --------------VALUES----------------- */
 
 .values {
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
-
 .values-list {
+    display: flex;
+    gap: 24px;
 }
 .values-item {
+    width: calc((100% - 72px) / 4);
 }
 .values-subtitle {
     color: #2e2f42;
@@ -133,6 +194,7 @@ cursor: pointer;
     font-weight: 500;
     line-height: 1.20;
     letter-spacing: 0.02em;
+    margin-bottom: 8px;
 }
 .values-item-text {
 color:#434455;
@@ -146,16 +208,35 @@ letter-spacing: 0.02em;
 /** --------------TEAM----------------- */
 
 .team {
-    background-color: #F4F4FD
+    background-color: #F4F4FD;
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 .team-list {
+display: flex;
+gap: 24px;
 }
+
 .team-list-item {
-    background-color: #FFFFFF 
+background-color: #FFFFFF;
+border-radius: 0px 0px 4px 4px;
+box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+width: calc((100% - 72px) / 4);
+display: inline-flex;
+padding-bottom: 32px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 32px;
+max-width: 264px;
+
+
 }
 .team-item-img {
 }
-
+.team-title{
+    margin-bottom: 72px;
+}
 .team-iteam-title {
     color:#2e2f42 ;
     text-align: center;
@@ -172,17 +253,43 @@ font-size: 16px;
 line-height: 1.50; 
 letter-spacing: 0.02em;
 }
+.team-iteam-all-text{
+display: flex;
+width: 232px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 8px;
+}
 
 /** ----------------------------------- */
 
 /** --------------PORTFOLIO----------------- */
 
 .portfolio {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+.portfolio-title{
+margin-bottom: 72px;
 }
 
 .portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px 24px;
 }
 .portfolio-list-item {
+border: 1px solid  #E7E9FC;
+background:  #FFF;
+display: flex;
+width: 360px;
+height: 420px;
+padding-bottom: 32px;
+flex-direction: column;
+align-items: flex-start;
+gap: 32px;
+flex-shrink: 0;
 }
 .portfolio-item-img {
 }
@@ -202,6 +309,17 @@ letter-spacing: 0.02em;
     line-height: 1.50; 
     letter-spacing: 0.02em;
 }
+
+.portfolio-item-all-text{
+    display: flex;
+padding: 0px 16px;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 8px;
+align-self: stretch;
+}
+
 /** ----------------------------------- */
 
 /**---------------FOOTER----------------*/
@@ -211,6 +329,10 @@ letter-spacing: 0.02em;
 }
 
 .footer-logo {
+    display: flex;
+    padding-top: 101px;
+    margin-bottom: 17px;
+    
     color: #4D5AE5;
     font-family: Raleway, sans-serif;
     font-size: 18px;
@@ -229,6 +351,10 @@ letter-spacing: 0.02em;
     font-size: 16px;
     line-height: 1.50; 
     letter-spacing: 0.02em;
+    width: 264px;
+    border: solid #31D0AA;
 }
-
+.footer-container{
+    height: 312px;
+}
 /** ----------------------------------- */
